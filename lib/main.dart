@@ -11,8 +11,8 @@ class MagicBall extends StatefulWidget {
 class _MagicBallState extends State<MagicBall> {
   int ballNumber = 1;
 
-  void changeBallNumber (){
-    ballNumber = Random().nextInt(5) +1;
+  void changeBallNumber() {
+    ballNumber = Random().nextInt(5) + 1;
   }
 
   @override
@@ -22,13 +22,13 @@ class _MagicBallState extends State<MagicBall> {
         backgroundColor: Colors.blueAccent[700],
         body: Center(
           child: FlatButton(
-            onPressed: (){
-              setState((){
+            onPressed: () {
+              setState(() {
                 changeBallNumber();
               });
             },
             child: Image.asset('images/ball$ballNumber.png'),
-            ),
+          ),
         ),
       ),
     );
